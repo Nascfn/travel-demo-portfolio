@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wendle, slow travel in small company</title>
+  <meta name="description" content="Wendle plans unhurried small-group trips for couples who would rather not take a package tour. A concept site.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Hanken+Grotesk:wght@400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="nav__name" href="#top" aria-label="Wendle, back to the top">Wendle</a>
+    <a class="link nav__action" href="#request">Consultation</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__left">
+        <div class="hero__head">
+          <h1>Slow travel,<br>in small company.</h1>
+          <div class="hero__act">
+            <p class="lead">Wendle plans unhurried small-group trips for couples who avoid package tours.</p>
+            <a class="btn" href="#request">Request a consultation</a>
+          </div>
+        </div>
+
+        <fieldset class="journeys">
+          <legend class="visually-hidden">Choose a sample journey to see its photograph</legend>
+          <div class="rows">
+            <div class="rows__head" aria-hidden="true"><span>Journey</span><span>Country</span><span>Month</span><span>Length</span><span>Pace</span></div>
+            <label class="row is-current">
+              <input class="pick" type="radio" name="journey" id="j1" value="Alentejo coast" checked>
+              <span class="row__name">Alentejo coast</span>
+              <span class="row__fact row__place">Portugal</span>
+              <span class="row__fact row__month">April</span>
+              <span class="row__fact row__days num">9&nbsp;days</span>
+              <span class="row__fact row__pace">Easy</span>
+            </label>
+            <label class="row">
+              <input class="pick" type="radio" name="journey" id="j2" value="Puglia back roads">
+              <span class="row__name">Puglia back roads</span>
+              <span class="row__fact row__place">Italy</span>
+              <span class="row__fact row__month">May</span>
+              <span class="row__fact row__days num">8&nbsp;days</span>
+              <span class="row__fact row__pace">Easy</span>
+            </label>
+            <label class="row">
+              <input class="pick" type="radio" name="journey" id="j3" value="Lofoten midsummer">
+              <span class="row__name">Lofoten midsummer</span>
+              <span class="row__fact row__place">Norway</span>
+              <span class="row__fact row__month">June</span>
+              <span class="row__fact row__days num">10&nbsp;days</span>
+              <span class="row__fact row__pace">Active</span>
+            </label>
+            <label class="row">
+              <input class="pick" type="radio" name="journey" id="j4" value="The Peloponnese">
+              <span class="row__name">The Peloponnese</span>
+              <span class="row__fact row__place">Greece</span>
+              <span class="row__fact row__month">September</span>
+              <span class="row__fact row__days num">9&nbsp;days</span>
+              <span class="row__fact row__pace">Moderate</span>
+            </label>
+            <label class="row">
+              <input class="pick" type="radio" name="journey" id="j5" value="Kyoto maples">
+              <span class="row__name">Kyoto maples</span>
+              <span class="row__fact row__place">Japan</span>
+              <span class="row__fact row__month">November</span>
+              <span class="row__fact row__days num">11&nbsp;days</span>
+              <span class="row__fact row__pace">Easy</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="stage" id="stage">
+        <figure class="shot shot--1 is-on" data-slot="journey-alentejo" data-alt="An empty Atlantic beach below ochre cliffs on the Alentejo coast, in low morning sun.">
+          <img src="images/journey-alentejo.webp" width="1275" height="1650" alt="An empty Atlantic beach below ochre cliffs on the Alentejo coast, in low morning sun" fetchpriority="high">
+        </figure>
+        <figure class="shot shot--2" data-slot="journey-puglia" data-alt="A dry-stone lane between old olive trees in Puglia, in dappled midday light.">
+          <img src="images/journey-puglia.webp" width="1275" height="1650" alt="A dry-stone lane between old olive trees in Puglia, in dappled midday light">
+        </figure>
+        <figure class="shot shot--3" data-slot="journey-lofoten" data-alt="Red fishing cabins over still water in Lofoten, under low midsummer sun.">
+          <img src="images/journey-lofoten.webp" width="1275" height="1650" alt="Red fishing cabins over still water in Lofoten, under low midsummer sun">
+        </figure>
+        <figure class="shot shot--4" data-slot="journey-peloponnese" data-alt="A stone village lane in the Mani running down to the sea, in warm late light.">
+          <img src="images/journey-peloponnese.webp" width="1275" height="1650" alt="A stone village lane in the Mani running down to the sea, in warm late light">
+        </figure>
+        <figure class="shot shot--5" data-slot="journey-kyoto" data-alt="A temple garden path in Kyoto under red maple leaves, in soft morning sun.">
+          <img src="images/journey-kyoto.webp" width="1275" height="1650" alt="A temple garden path in Kyoto under red maple leaves, in soft morning sun">
+        </figure>
+      </div>
+    </section>
+
+    <section class="plate" aria-label="The Alentejo coast" data-reveal>
+      <figure class="photo plate__photo" data-slot="coast-wide" data-alt="A long table laid for supper under a vine pergola beside a whitewashed farmhouse, in low evening sun.">
+        <img src="images/coast-wide.webp" width="2400" height="1150" alt="A long table laid for supper under a vine pergola beside a whitewashed farmhouse, in low evening sun" loading="lazy">
+      </figure>
+      <div class="plate__scrim" aria-hidden="true"></div>
+      <p class="plate__line">Nowhere to be until supper.</p>
+    </section>
+
+    <section class="how">
+      <div class="container">
+        <h2>Whole days with nothing planned.</h2>
+        <ul class="ways" data-reveal>
+          <li class="cols">
+            <h3>We talk first</h3>
+            <p>An hour on how you like to spend a day.</p>
+          </li>
+          <li class="cols">
+            <h3>One planner throughout</h3>
+            <p>The person you first speak to writes every day of it.</p>
+          </li>
+          <li class="cols">
+            <h3>Small company</h3>
+            <p>A handful of couples at one table, never a coach.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case" id="alentejo">
+      <div class="container">
+        <div class="cols case__head">
+          <h2>Nine days on the Alentejo coast</h2>
+          <p class="lead">Three villages, three nights in each, the Atlantic beside you all the way south.</p>
+        </div>
+        <figure class="photo case__photo" data-slot="case-alentejo" data-alt="A whitewashed village with blue trim on a rocky headland, seen across the river in late-afternoon sun.">
+          <img src="images/case-alentejo.webp" width="2000" height="1125" alt="A whitewashed village with blue trim on a rocky headland, seen across the river in late-afternoon sun" loading="lazy">
+        </figure>
+        <p class="caption">Vila Nova de Milfontes, days 4 to 6.</p>
+
+        <figure class="scale" data-reveal>
+          <div class="cols scale__head" aria-hidden="true">
+            <span class="scale__label">Day</span>
+            <div class="scale__days"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>
+          </div>
+          <ol class="scale__rows">
+            <li class="cols stay">
+              <div class="stay__text">
+                <h3>Comporta</h3>
+                <p>Days 1 to 3, among rice fields and dunes.</p>
+              </div>
+              <div class="track" aria-hidden="true"><span class="bar" style="--from: 1; --span: 3; --i: 0"></span></div>
+            </li>
+            <li class="cols stay">
+              <div class="stay__text">
+                <h3>Vila Nova de Milfontes</h3>
+                <p>Days 4 to 6, where the river meets the sea.</p>
+              </div>
+              <div class="track" aria-hidden="true"><span class="bar" style="--from: 4; --span: 3; --i: 1"></span></div>
+            </li>
+            <li class="cols stay">
+              <div class="stay__text">
+                <h3>Odeceixe</h3>
+                <p>Days 7 to 9, on the cliff path.</p>
+              </div>
+              <div class="track" aria-hidden="true"><span class="bar" style="--from: 7; --span: 3; --i: 2"></span></div>
+            </li>
+            <li class="cols stay">
+              <div class="stay__text">
+                <h3>Left open</h3>
+                <p>Days 3, 6 and 9, with nothing planned.</p>
+              </div>
+              <div class="track" aria-hidden="true"><span class="bar bar--open" style="--from: 3; --i: 3"></span><span class="bar bar--open" style="--from: 6; --i: 4"></span><span class="bar bar--open" style="--from: 9; --i: 5"></span></div>
+            </li>
+          </ol>
+          <figcaption>A sample itinerary. Yours is written after we talk.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="request" id="request">
+      <div class="container cols">
+        <div class="request__text">
+          <h2>An hour to talk it through</h2>
+          <p class="lead">By phone or video, with the person who would plan your trip.</p>
+          <a class="link" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+
+        <form class="form" data-endpoint="" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="request-help">
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true" aria-describedby="request-help">
+          </div>
+          <div class="field field--wide">
+            <label for="journey">Journey in mind</label>
+            <div class="select">
+            <select id="journey" name="journey">
+              <option value="">Not sure yet</option>
+              <option>Alentejo coast</option>
+              <option>Puglia back roads</option>
+              <option>Lofoten midsummer</option>
+              <option>The Peloponnese</option>
+              <option>Kyoto maples</option>
+              <option>Somewhere else</option>
+            </select>
+            </div>
+          </div>
+          <div class="field field--wide">
+            <label for="note">Anything we should know (optional)</label>
+            <textarea id="note" name="note" rows="4"></textarea>
+          </div>
+          <div class="form__foot">
+            <button class="btn" type="submit">Request a consultation</button>
+            <p class="form__note">This form is not connected in this concept, so nothing is sent.</p>
+          </div>
+          <p class="form__help" id="request-help" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="close">
+    <div class="container">
+      <div class="cols close__grid">
+        <div class="close__sign">
+          <p>Go slowly,</p>
+          <p class="close__name">Wendle</p>
+        </div>
+        <div class="close__meta">
+          <time datetime="2026-11">November 2026</time>
+          <a class="link" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+      </div>
+      <p class="close__concept">Wendle is a concept site. The agency, its journeys and its contact details are invented.</p>
+    </div>
+  </footer>
+
+  <script>document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+  <script src="script.js"></script>
+</body>
+</html>
