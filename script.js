@@ -30,17 +30,28 @@
 })();
 
 // The nav plate slides away on the way down and returns on the way up, so
-// it never sits over a heading that is being read.
+// it never sits over a heading that is being read. While the photograph is
+// pinned where the plate would land, the plate stays away.
 (() => {
   const nav = document.querySelector('.nav');
   if (!nav) return;
-  let last = window.scrollY;
+  const stage = document.getElementById('stage');
+  const root = document.documentElement;
+  // Overscroll at either end springs back and would read as a change of direction.
+  const scrollTop = () => Math.min(Math.max(window.scrollY, 0), Math.max(root.scrollHeight - window.innerHeight, 0));
+  const overStage = () => {
+    if (!stage || getComputedStyle(stage).position !== 'sticky') return false;
+    const s = stage.getBoundingClientRect();
+    return s.top < nav.offsetTop + nav.offsetHeight && s.bottom > nav.offsetTop
+      && s.left < nav.offsetLeft + nav.offsetWidth && s.right > nav.offsetLeft;
+  };
+  let last = scrollTop();
   let queued = false;
   const update = () => {
     queued = false;
-    const y = window.scrollY;
+    const y = scrollTop();
     if (y < 120) nav.classList.remove('is-away');
-    else if (y > last + 4) nav.classList.add('is-away');
+    else if (y > last + 4 || overStage()) nav.classList.add('is-away');
     else if (y < last - 4) nav.classList.remove('is-away');
     last = y;
   };
